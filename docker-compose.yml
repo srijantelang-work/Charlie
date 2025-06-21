@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  charlie-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=true
+      - SECRET_KEY=dev-secret-key-change-in-production
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      - SUPABASE_SERVICE_KEY=${SUPABASE_SERVICE_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/google-credentials.json
+      - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - .:/app
+      - ./google-credentials.json:/app/google-credentials.json:ro
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - charlie-network
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - charlie-network
+
+  # Optional: Add Celery worker for task processing
+  celery-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A app.core.celery worker --loglevel=info
+    environment:
+      - DEBUG=true
+      - SECRET_KEY=dev-secret-key-change-in-production
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      - SUPABASE_SERVICE_KEY=${SUPABASE_SERVICE_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/google-credentials.json
+      - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - .:/app
+      - ./google-credentials.json:/app/google-credentials.json:ro
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - charlie-network
+
+volumes:
+  redis_data:
+
+networks:
+  charlie-network:
+    driver: bridge 
