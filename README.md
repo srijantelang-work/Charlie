@@ -87,14 +87,6 @@ Charlie Core
 - **llama.cpp**: Local LLM inference
 - **Home Assistant**: Device control integration
 
-## ⚡ Performance Comparison
-
-| Metric | MARK I | MARK II |
-|--------|---------|----------|
-| Response Time | 15-20s | 2.5-5s |
-| Processing | Sequential | Parallel |
-| Operations | Single | Multiple |
-| Voice Quality | Good | Enhanced |
 
 ## 🚦 Getting Started
 
