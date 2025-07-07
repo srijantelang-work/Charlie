@@ -3,14 +3,6 @@
 
 Charlie  is a powerful, open-source AI assistant designed for real-time interaction and system integration. This next-generation release focuses on dramatic performance improvements and enhanced capabilities while maintaining a completely open-source architecture.
 
-## ✨ What's New in Charlie
-
-- **5x Faster Response Time**: Reduced from 15-20s to 2.5-5s
-- **Parallel Processing**: Handle multiple operations simultaneously
-- **Enhanced Voice Interaction**: Improved voice clarity and reduced latency
-- **Real-time Processing**: Streaming responses and continuous interaction
-- **Modular Architecture**: Plug-and-play capability for custom extensions
-
 ## 🚀 Core Features
 
 <details>
@@ -106,13 +98,6 @@ pip install -r requirements.txt
 python charlie.py
 ```
 
-## 📋 Requirements
-
-- Python 3.8+
-- CUDA-compatible GPU (recommended)
-- 8GB+ RAM
-- 20GB disk space
-
 ## 🔧 Configuration
 
 Create a `config.yaml` file in the root directory:
@@ -164,12 +149,6 @@ models/
 
 ## 🙏 Acknowledgments
 
-Special thanks to the open-source community and the creators of:
-- StyleTTS2
-- faster-whisper
-- llama.cpp
-- FastAPI
-- Home Assistant
 
 ---
 
