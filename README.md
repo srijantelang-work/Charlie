@@ -1,7 +1,6 @@
-# Charlie 
-### Friendly, Reliable, Intelligent Digital Assistant
 
-Charlie  is a powerful, open-source AI assistant designed for real-time interaction and system integration. This next-generation release focuses on dramatic performance improvements and enhanced capabilities while maintaining a completely open-source architecture.
+
+**Charlie**  is a powerful, open-source AI assistant designed for real-time interaction and system integration. This next-generation release focuses on dramatic performance improvements and enhanced capabilities while maintaining a completely open-source architecture.
 
 ## 🚀 Core Features
 
