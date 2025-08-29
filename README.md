@@ -1,5 +1,5 @@
 
-Charlie is a next-generation open-source AI assistant built for real-time interaction and seamless system integration. This latest release delivers major performance upgrades and expanded capabilities, all while staying fully open and transparent.
+Charlie is a AI assistant built for real-time interaction and seamless system integration. This latest release delivers major performance upgrades and expanded capabilities, all while staying fully open and transparent.
 
 ## 🚀 Core Features
 
@@ -151,3 +151,4 @@ models/
 ---
 
 <p align="center">Made with a dream of matching Tony Stark </p>
+
