@@ -36,3 +36,6 @@ conversation_memory.json
 # IDE
 .vscode/
 .idea/
+
+
+docs/
