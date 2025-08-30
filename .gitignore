@@ -10,12 +10,9 @@ friday.egg-info/
 models/
 
 # Files
-FRIDAY.png
-environment.txt
 requirements_frozen.txt
 requirements_mark2.txt
 Inference_LJSpeech.ipynb
-MARK II.md
 pytest.ini
 context_memory.json
 conversation_memory.json
